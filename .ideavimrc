@@ -1,0 +1,58 @@
+set ignorecase
+let mapleader = ","
+
+"Don't Show Number Line
+set nonu
+
+"Mapping ESC key
+imap jj <esc>
+vmap ; vv
+
+"Mappings of Jumping
+nmap <A-j> <C-f>
+nmap <A-k> <C-b>
+
+" Save Current File
+map <leader>w :w<CR>
+
+" Source Configuration File
+nnoremap <leader>sv :source ~/.ideavimrc<CR>
+
+" Toggle LineNumbers
+nmap <leader>l :action EditorToggleShowLineNumbers<CR>
+
+" Show Tabs on Top
+nmap <leader>tt :action TabsPlacementTop<CR>
+
+" Hide Tabs
+nmap <leader>tn :action TabsPlacementNone<CR>
+
+" Toggle StatusBar
+nmap <leader>st :action ViewStatusBar<CR>
+
+" Join Lines
+nmap J :action EditorJoinLines<CR>
+
+" Create a Window Horizontally
+nmap sp :action SplitHorizontally<CR>
+
+" Create a Window Vertically
+nmap vsp :action SplitVertically<CR>
+
+" Move Curent Cursor to Left
+nmap <c-h> :action VimWindowLeft<CR>
+
+" Move Curent Cursor to Down
+nmap <c-j> :action VimWindowDown<CR>
+
+" Move Curent Cursor to Up
+nmap <c-k> :action VimWindowUp<CR>
+
+" Move Curent Cursor to Right
+nmap <c-l> :action VimWindowRight<CR>
+
+" Close Current Window
+nmap <leader>q :action VimWindowClose<CR>
+
+" Close Ohter Windows
+nmap <leader>on :action VimWindowOnly<CR>
