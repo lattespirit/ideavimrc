@@ -34,25 +34,28 @@ nmap <leader>st :action ViewStatusBar<CR>
 nmap J :action EditorJoinLines<CR>
 
 " Create a Window Horizontally
-nmap sp :action SplitHorizontally<CR>
+nmap sp :action SplitHorizontally<CR><C-j>
 
 " Create a Window Vertically
-nmap vsp :action SplitVertically<CR>
+nmap vsp :action SplitVertically<CR><C-l>
 
 " Move Curent Cursor to Left
-nmap <c-h> :action VimWindowLeft<CR>
+nmap <C-h> :action VimWindowLeft<CR>
 
 " Move Curent Cursor to Down
-nmap <c-j> :action VimWindowDown<CR>
+nmap <C-j> :action VimWindowDown<CR>
 
 " Move Curent Cursor to Up
-nmap <c-k> :action VimWindowUp<CR>
+nmap <C-k> :action VimWindowUp<CR>
 
 " Move Curent Cursor to Right
-nmap <c-l> :action VimWindowRight<CR>
+nmap <C-l> :action VimWindowRight<CR>
 
 " Close Current Window
 nmap <leader>q :action VimWindowClose<CR>
 
 " Close Ohter Windows
 nmap <leader>on :action VimWindowOnly<CR>
+
+" Search Global Symbol
+nmap <leader>f :action GotoSymbol<CR>
