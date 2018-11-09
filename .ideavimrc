@@ -1,61 +1,90 @@
 set ignorecase
 let mapleader = ","
 
-"Don't Show Number Line
+" Don't Show Number Line
 set nonu
 
-"Mapping ESC key
+" Mapping ESC key
 imap jj <esc>
 vmap ; vv
 
-"Mappings of Jumping
+" Save Files
+nmap ,w :action SaveAll<CR>
+
+" Mappings of Jumping
 nmap <A-j> <C-f>
 nmap <A-k> <C-b>
 
-" Save Current File
-map <leader>w :w<CR>
+" Edit Configuration File
+nnoremap <leader>ev :e ~/.ideavimrc<CR>
 
 " Source Configuration File
 nnoremap <leader>sv :source ~/.ideavimrc<CR>
 
 " Toggle LineNumbers
-nmap <leader>l :action EditorToggleShowLineNumbers<CR>
+" nmap <leader>l :action EditorToggleShowLineNumbers<CR>
 
 " Show Tabs on Top
 nmap <leader>tt :action TabsPlacementTop<CR>
-
+" Close Tabs
+nmap <leader>tn :action TabsPlacementNone<CR>
 " Hide Tabs
 nmap <leader>tn :action TabsPlacementNone<CR>
 
 " Toggle StatusBar
-nmap <leader>st :action ViewStatusBar<CR>
+nmap <leader>a :action ViewStatusBar<CR>
 
 " Join Lines
 nmap J :action EditorJoinLines<CR>
 
-" Create a Window Horizontally
-nmap sp :action SplitHorizontally<CR><C-j>
+" ======================================== Window - Start========================================
 
-" Create a Window Vertically
-nmap vsp :action SplitVertically<CR><C-l>
+" Clone a Window Horizontally
+nmap <leader>sp :action SplitHorizontally<CR><C-j>
+" Clone a Window Vertically
+nmap <leader>vsp :action SplitVertically<CR><C-l>
+" Move Current Tab Right
+nmap L :action MoveTabRight<CR>
+" Move Current Tab Down
+nmap J :action MoveTabDown<CR>
 
 " Move Curent Cursor to Left
 nmap <C-h> :action VimWindowLeft<CR>
-
 " Move Curent Cursor to Down
 nmap <C-j> :action VimWindowDown<CR>
-
 " Move Curent Cursor to Up
 nmap <C-k> :action VimWindowUp<CR>
-
 " Move Curent Cursor to Right
 nmap <C-l> :action VimWindowRight<CR>
 
-" Close Current Window
-nmap <leader>q :action VimWindowClose<CR>
+" UnsplitAll Window
+nmap :on :action UnsplitAll<CR>
 
+" Close Current Window
+nmap q :action CloseContent<CR>
+nmap <c-w> :action CloseContent<CR>
+" Reopen Prev Closed Window
+nmap X :action ReopenClosedTab<CR>
 " Close Ohter Windows
-nmap <leader>on :action VimWindowOnly<CR>
+" nmap :on :action VimWindowOnly<CR>
+
+" ======================================== Window - End========================================
 
 " Search Global Symbol
-nmap <leader>f :action GotoSymbol<CR>
+nmap R :action GotoSymbol<CR>
+
+" Go to current definition
+nmap <leader>g :action GotoDeclaration<CR>
+
+" List File function and symbole
+nmap r :action FileStructurePopup<CR>
+
+" Open RecentFiles
+nmap <enter> :action RecentFiles<CR>
+nmap e :action RecentFiles<CR>
+
+" Enable Multiple Cursor Feature
+set multiple-cursors
+
+" Enable Surround
+set surround
