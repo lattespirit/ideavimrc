@@ -89,6 +89,9 @@ nmap <space> :action EditorSelectWord<CR>
 " Comment Line
 nmap <BS> :action CommentByLineComment<CR>
 
+" Rerun Last Test
+nmap T :action Run<CR>
+
 " Enable Multiple Cursor Feature
 set multiple-cursors
 
