@@ -86,6 +86,9 @@ nmap e :action RecentFiles<CR>
 " Expand Selection
 nmap <space> :action EditorSelectWord<CR>
 
+" Comment Line
+nmap <BS> :action CommentByLineComment<CR>
+
 " Enable Multiple Cursor Feature
 set multiple-cursors
 
