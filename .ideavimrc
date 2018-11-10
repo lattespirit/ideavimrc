@@ -92,6 +92,9 @@ nmap <BS> :action CommentByLineComment<CR>
 " Rerun Last Test
 nmap T :action Run<CR>
 
+" Hide Active Window
+nnoremap <ESC> :action HideActiveWindow<CR>
+
 " Enable Multiple Cursor Feature
 set multiple-cursors
 
