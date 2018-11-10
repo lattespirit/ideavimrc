@@ -83,6 +83,9 @@ nmap r :action FileStructurePopup<CR>
 nmap <enter> :action RecentFiles<CR>
 nmap e :action RecentFiles<CR>
 
+" Expand Selection
+nmap <space> :action EditorSelectWord<CR>
+
 " Enable Multiple Cursor Feature
 set multiple-cursors
 
