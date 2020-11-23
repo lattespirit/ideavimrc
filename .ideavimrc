@@ -95,6 +95,12 @@ nmap T :action Run<CR>
 " Hide Active Window
 nnoremap <ESC> :action HideActiveWindow<CR>
 
+" Reveal file in project
+nnoremap <M-2> :action SelectInProjectView<CR>
+
+" Toggle Terminal
+nnoremap <M-3> :action ActivateTerminalToolWindow<CR>
+
 " Enable Multiple Cursor Feature
 set multiple-cursors
 
