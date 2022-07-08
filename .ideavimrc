@@ -76,6 +76,9 @@ nmap R :action GotoSymbol<CR>
 " Go to current definition
 nmap <leader>g :action GotoDeclaration<CR>
 
+" Go Back previous definition
+nmap <leader>G :action Back<CR>
+
 " List File function and symbole
 nmap r :action FileStructurePopup<CR>
 
